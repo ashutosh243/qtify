@@ -1,0 +1,12 @@
+.hero{
+
+    width: 100vw;
+    background-color: var(--primary-color) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 50px;
+    z-index: 5;
+    color:var(--Background-color);
+}
