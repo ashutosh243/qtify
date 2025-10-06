@@ -25,7 +25,7 @@ const Section = ({ heading, data }) => {
         </div>
       </div>
       <div className={Style.container}>
-        {Array.from(visibleAlbums)?.map((album) => { return <Card key={album.id} img={album.image} follow={album.follows}></Card> })}
+        {Array.from(visibleAlbums)?.map((album) => { return <Card key={album.id} img={album.image} follow={album.follows} title={album.title}></Card> })}
       </div>
     </div>
   </>);
