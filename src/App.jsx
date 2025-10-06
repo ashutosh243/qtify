@@ -1,6 +1,7 @@
 import Navbar from './component/navbar/Navbar'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Hero from './component/Hero/Hero';
+import Section from './component/section/Section';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Router>
        <Navbar></Navbar>
        <Hero></Hero>
+       {/* <Section></Section> */}
       </Router>
     </>
   )

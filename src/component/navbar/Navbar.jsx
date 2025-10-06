@@ -7,11 +7,11 @@ import Btn from "../Button/Btn";
 
 function Navbar({searchData} ) {
   return (
-    <nav className={style.navbar} >
+    <nav className={style.navbarContainer}>
       <Link to="/home">
         <Logo />
       </Link>
-       <Search
+      <Search
         placeholder="Search a song of your choice"
         searchData={searchData}
       />

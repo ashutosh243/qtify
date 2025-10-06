@@ -1,4 +1,4 @@
-.hero{
+.parentWithImage{
 
     width: 100vw;
     background-color: var(--primary-color) !important;
@@ -9,4 +9,5 @@
     padding: 50px;
     z-index: 5;
     color:var(--Background-color);
+    font-family: 'Poppins', sans-serif;
 }
