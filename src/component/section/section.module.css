@@ -2,10 +2,8 @@
     height: auto;
     width: 93vw;
     margin: auto;
-    border: 1px solid black;
-  
     margin-bottom: 2rem;
-    background-color: black;
+    background-color: var(--primary-color);
 }
 .heading{
     padding: 0.3rem;
