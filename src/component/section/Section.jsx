@@ -4,10 +4,12 @@ import Style from './section.module.css';
 import { useState } from 'react';
 
 
+
 const Section = ({ heading, data }) => {
+  console.log(data);
   const [showAll, setShowAll] = useState(false);
-  const visibleSongs = showAll ? data?.songs : data?.songs?.slice(0, 6);
-  console.log(visibleSongs);
+  const visibleAlbums = showAll ? data : data;
+  console.log(visibleAlbums);
   return (<>
     <div className={Style.sections}>
       <div className={Style.heading}>
@@ -25,7 +27,7 @@ const Section = ({ heading, data }) => {
           </div>
       </div>
       <div className={Style.container}>
-        {visibleSongs?.map((song) => { return <Card key={song.id} img={song.image} follow={data.follows}></Card> })}
+        {Array.from(visibleAlbums)?.map((album) => { return <Card key={album.id} img={album.image} follow={album.follows}></Card> })}
       </div>
     </div>
   </>);

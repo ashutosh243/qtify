@@ -15,9 +15,9 @@ function App() {
     async function getData()
     {
       const response1=await axios.get('https://qtify-backend.labs.crio.do/albums/top');
-      setTopAlbums(()=>response1.data[0]);
+      setTopAlbums(()=>response1.data);
       const response2=await axios.get('https://qtify-backend.labs.crio.do/albums/new');
-      setNewAlbums(()=>response2.data[0]);
+      setNewAlbums(()=>response2.data);
     }
     getData();
   },[]);
