@@ -4,7 +4,7 @@ import style from './Btn.module.css';
 
 const Btn = ({text}) => {
     return <>
-        <Button className={style.btn}>{text}</Button>
+        <Button sx={{ fontFamily: 'Poppins' }} className={style.btn}>{text}</Button>
     </>
 }
 export default Btn;
