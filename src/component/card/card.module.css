@@ -1,4 +1,26 @@
 .card{
-
-    background-color: yellow;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
 }
+.imgContainer{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;   
+}
+.imgContainer img{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.infoContainer{
+   
+   width: 200px;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+}
+

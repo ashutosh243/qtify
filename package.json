@@ -8,13 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start":"vite preview"
+    "start": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
+    "axios": "^1.12.2",
     "icons-material": "^0.0.1-security",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
