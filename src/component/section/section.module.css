@@ -46,3 +46,13 @@
     background-color: green;
     cursor: pointer;
 }
+/* getting error when i am implementing thorugh the slice */
+.collapse{
+
+    max-height: 280px;;
+    overflow: hidden;
+}
+.show{
+    max-height: 1000px;
+    overflow: hidden;
+}

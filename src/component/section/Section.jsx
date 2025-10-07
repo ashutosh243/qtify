@@ -3,6 +3,7 @@ import Card from '../card/Card'
 import Style from './section.module.css';
 import { useState } from 'react';
 import axios from 'axios';
+import Collapse from '@mui/material/Collapse';
 // import { generatePath } from 'react-router-dom';
 
 
@@ -39,12 +40,12 @@ const Section = ({ heading, data, songsSection }) => {
     setVisibleAlbums(updatedsongs);
   }, [currentGeneres]);
 
-  console.log(visibleAlbums);
+  console.log(showAll);
   return (<>
     <div className={Style.sections}>
       <div className={Style.heading}>
         <p>{heading}</p>
-        {!songsSection && <div>
+        {!songsSection && <div >
 
           <button
             className={Style.toggleBtn}
@@ -62,7 +63,8 @@ const Section = ({ heading, data, songsSection }) => {
           }
         </div>
       }
-      <div className={Style.container}>
+      <div className={`${Style.container} ${showAll ? Style.show : Style.collapse}`}
+>
         {Array.from(visibleAlbums)?.map((album) => { return <Card key={album.id} img={album.image} follow={album.follows} title={album.title}></Card> })}
       </div>
     </div>
