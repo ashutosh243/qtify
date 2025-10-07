@@ -11,6 +11,7 @@ function App() {
    
   const [topAlbums,setTopAlbums]=useState({});
   const [NewAlbums,setNewAlbums]=useState({});
+  const [songs,setSongs]=useState([]);
   useEffect(()=>{
     async function getData()
     {
@@ -18,6 +19,9 @@ function App() {
       setTopAlbums(()=>response1.data);
       const response2=await axios.get('https://qtify-backend.labs.crio.do/albums/new');
       setNewAlbums(()=>response2.data);
+      const response3=await axios.get('https://qtify-backend.labs.crio.do/songs');
+      setSongs(()=>response3.data);
+
     }
     getData();
   },[]);
@@ -30,6 +34,7 @@ function App() {
        <div className={style.main}>
           <Section heading="Top Albums" data={topAlbums}></Section>
           <Section heading="New Albums" data={NewAlbums}></Section>
+          <Section heading="songs" songsSection={true} data={songs}></Section>
        </div>
       </Router>
     </>
