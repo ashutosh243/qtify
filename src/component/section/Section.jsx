@@ -3,9 +3,7 @@ import Card from '../card/Card'
 import Style from './section.module.css';
 import { useState } from 'react';
 import axios from 'axios';
-import { generatePath } from 'react-router-dom';
-
-
+// import { generatePath } from 'react-router-dom';
 
 
 const Section = ({ heading, data, songsSection }) => {
@@ -15,10 +13,9 @@ const Section = ({ heading, data, songsSection }) => {
   const [currentGeneres, setCurrentGeneres] = useState('All');
 
   useEffect(() => {
-    if (songsSection !== true)
-    {
-      setVisibleAlbums(showAll ? Array.from(data) : Array.from(data).slice(0, 7));
-    } 
+    if (songsSection !== true) {
+      setVisibleAlbums(showAll ? Array.from(data) : Array.from(data));
+    }
     else {
       setVisibleAlbums(Array.from(data)); //songs data
     }
@@ -33,13 +30,12 @@ const Section = ({ heading, data, songsSection }) => {
   }, []);
 
   useEffect(() => {
-    
-    if(currentGeneres==='All')
-    {
+
+    if (currentGeneres === 'All') {
       setVisibleAlbums(data);
       return;
     }
-    let updatedsongs=data.filter((songs) => songs.genre?.label === currentGeneres);
+    let updatedsongs = data.filter((songs) => songs.genre?.label === currentGeneres);
     setVisibleAlbums(updatedsongs);
   }, [currentGeneres]);
 
@@ -62,7 +58,7 @@ const Section = ({ heading, data, songsSection }) => {
       {
         songsSection && <div class={Style.genres}>
           {
-             genres?.map((data)=>{return <p onClick={()=>setCurrentGeneres(data.label)}>{data.label}</p>})
+            genres?.map((data) => { return <p onClick={() => setCurrentGeneres(data.label)}>{data.label}</p> })
           }
         </div>
       }
